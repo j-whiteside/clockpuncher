@@ -90,6 +90,7 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Tracker">Tracker</a></li>
                         <li><a runat="server" href="~/ThrowError">Non 404 error</a></li>
+                        <li><a runat="server" href="~/Employees">View Employees</a></li>
 
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">

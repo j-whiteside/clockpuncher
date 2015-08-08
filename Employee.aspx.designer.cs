@@ -7,37 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace landlorder2.Account {
+namespace landlorder2 {
     
     
-    public partial class Login {
+    public partial class Employee {
         
         /// <summary>
-        /// LoginStatus control.
+        /// UserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder LoginStatus;
+        protected global::System.Web.UI.WebControls.TextBox UserName;
         
         /// <summary>
-        /// StatusText control.
+        /// UsernameFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal StatusText;
-        
-        /// <summary>
-        /// LoginForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder LoginForm;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator UsernameFieldValidator;
         
         /// <summary>
         /// EmailAddress control.
@@ -49,21 +40,48 @@ namespace landlorder2.Account {
         protected global::System.Web.UI.WebControls.TextBox EmailAddress;
         
         /// <summary>
-        /// Password control.
+        /// EmailFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailFieldValidator;
         
         /// <summary>
-        /// LogoutButton control.
+        /// HourlyWage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder LogoutButton;
+        protected global::System.Web.UI.WebControls.TextBox HourlyWage;
+        
+        /// <summary>
+        /// HourlyWageFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator HourlyWageFieldValidator;
+        
+        /// <summary>
+        /// HourlyWageRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator HourlyWageRangeValidator;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

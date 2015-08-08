@@ -69,7 +69,16 @@ namespace landlorder2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                privateNav.Visible = false;
+                publicNav.Visible = true;
+            }
+            else
+            {
+                privateNav.Visible = true;
+                publicNav.Visible = false;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

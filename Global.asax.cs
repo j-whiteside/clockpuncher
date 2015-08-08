@@ -24,7 +24,8 @@ namespace landlorder2
 
             if (objError.GetHttpCode() == 404)
             {
-                Server.Transfer("/404.aspx");
+                var message = objError.Message;
+                    Server.Transfer("/404.aspx");
                 return;
             }
 

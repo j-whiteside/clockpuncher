@@ -11,7 +11,16 @@ namespace landlorder2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                PrivateMessage.Visible = false;
+                PublicMessage.Visible = true;
+            }
+            else
+            {
+                PrivateMessage.Visible = true;
+                PublicMessage.Visible = false;
+            }
         }
     }
 }

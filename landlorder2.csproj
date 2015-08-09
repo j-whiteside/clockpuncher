@@ -448,6 +448,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>punchclocker.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\WorkHour.cs">
+      <DependentUpon>punchclocker.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

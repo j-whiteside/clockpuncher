@@ -13,6 +13,7 @@
         <AssociationConnector Association="landlorder2_dbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="landlorder2_dbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="landlorder2_dbModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="landlorder2_dbModel.WorkHour" Width="1.5" PointX="3.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

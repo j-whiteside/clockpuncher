@@ -110,5 +110,16 @@
       <End Role="AspNetRoles" EntitySet="AspNetRoles" />
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
     </AssociationSet>
+    <EntitySet Name="WorkHours" EntityType="landlorder2_dbModel.WorkHour" />
   </EntityContainer>
+  <EntityType Name="WorkHour">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ClockIn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ClockOut" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeWorked" Type="Int32" />
+    <Property Name="Employee" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

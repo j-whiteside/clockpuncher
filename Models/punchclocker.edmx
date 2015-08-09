@@ -65,7 +65,17 @@
           <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
           <Property Name="AccessFailedCount" Type="int" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
-          <Property Name="hourlyWage" Type="int" />
+          <Property Name="hourlyWage" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="WorkHours">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ClockIn" Type="datetime" Nullable="false" />
+          <Property Name="ClockOut" Type="datetime" Nullable="false" />
+          <Property Name="TimeWorked" Type="int" />
+          <Property Name="Employee" Type="nvarchar" MaxLength="128" Nullable="false" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
@@ -130,6 +140,7 @@
           <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkHours" EntityType="Self.WorkHours" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -261,7 +272,18 @@
             <End Role="AspNetRoles" EntitySet="AspNetRoles" />
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
           </AssociationSet>
+          <EntitySet Name="WorkHours" EntityType="landlorder2_dbModel.WorkHour" />
         </EntityContainer>
+        <EntityType Name="WorkHour">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ClockIn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ClockOut" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TimeWorked" Type="Int32" />
+          <Property Name="Employee" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -332,6 +354,17 @@
               <ScalarProperty Name="Id" ColumnName="UserId" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="WorkHours">
+            <EntityTypeMapping TypeName="landlorder2_dbModel.WorkHour">
+              <MappingFragment StoreEntitySet="WorkHours">
+                <ScalarProperty Name="Employee" ColumnName="Employee" />
+                <ScalarProperty Name="TimeWorked" ColumnName="TimeWorked" />
+                <ScalarProperty Name="ClockOut" ColumnName="ClockOut" />
+                <ScalarProperty Name="ClockIn" ColumnName="ClockIn" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

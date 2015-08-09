@@ -40,14 +40,7 @@ namespace landlorder2
             {
                 AspNetUser user = new AspNetUser();
 
-                if (Request.QueryString.Keys.Count > 0)
-                {
-                    var employeeId = Request.QueryString["Id"];
-
-                    user = (from Emp in conn.AspNetUsers
-                            where Emp.Id == employeeId
-                            select Emp).FirstOrDefault();
-                }
+                
                 user.UserName = UserName.Text.ToString();
                 user.Email = EmailAddress.Text.ToString();
                 user.hourlyWage = Convert.ToInt32(HourlyWage.Text.ToString());

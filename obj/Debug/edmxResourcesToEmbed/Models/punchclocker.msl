@@ -65,5 +65,16 @@
         <ScalarProperty Name="Id" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="WorkHours">
+      <EntityTypeMapping TypeName="landlorder2_dbModel.WorkHour">
+        <MappingFragment StoreEntitySet="WorkHours">
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+          <ScalarProperty Name="TimeWorked" ColumnName="TimeWorked" />
+          <ScalarProperty Name="ClockOut" ColumnName="ClockOut" />
+          <ScalarProperty Name="ClockIn" ColumnName="ClockIn" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
